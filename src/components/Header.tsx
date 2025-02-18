@@ -37,8 +37,8 @@ const Header = () => {
             </a>
           </nav>
 
-          <a href="/" className="font-clash font-semibold text-2xl">
-            FOKUS
+          <a href="/" className="font-clash font-semibold text-xl md:text-2xl">
+            INSTA ELECTRIC HUB
           </a>
 
           <div className="flex items-center space-x-4">

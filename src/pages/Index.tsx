@@ -79,15 +79,28 @@ const Index = () => {
             Shop by Category
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {["Headphones", "Speakers", "Accessories"].map((category, index) => (
+            {[
+              {
+                name: "Headphones",
+                image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+              },
+              {
+                name: "Speakers",
+                image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+              },
+              {
+                name: "Accessories",
+                image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+              }
+            ].map((category, index) => (
               <div key={index} className="relative aspect-square group cursor-pointer overflow-hidden">
                 <img
-                  src={`https://images.unsplash.com/photo-${index + 1}`}
-                  alt={category}
+                  src={category.image}
+                  alt={category.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
-                  <h3 className="text-white font-clash text-2xl">{category}</h3>
+                  <h3 className="text-white font-clash text-2xl">{category.name}</h3>
                 </div>
               </div>
             ))}
